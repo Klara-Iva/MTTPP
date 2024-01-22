@@ -30,7 +30,7 @@ Svaki test je napisan unutar zasebne klase i pokreće se zasebno te je neovisan 
 **ProgressBarTest:**
 -	Testira element progress bar i povezani gumb koji mijenja stanje između „start“ i „stop“.
 -	Pronalazi elemente pomoću „id“.
--	Prvo pokreće popunjavanje progress bar pritiskom na tipku „start“, a zatim pokušava zaustaviti progres bar na određenoj razini pritiskom na gumb „stop“. Vrijednost na kojoj se treba zaustaviti je unaprijed određena i predana funkciji.
--	Zbog stalnog dohvaćanja stanja progress bar, automatsko zaustavljanje na određenoj razini nije moguće bez dodatnih vremenskih proračuna i proračuna brzine popunjavanja bara. Zato je konačno stanje progress bara gotovo uvijek različito od predane vrijednosti.
+-	Prvo pokreće popunjavanje progress bar pritiskom na tipku „start“, a zatim  se koristi WebDriverWait.until() funckija pomoću koje se čeka da progess bar dosegne broj na kojem se treba zaustaviti. Kada progess bar dosegne taj broj, pritisne gumb "stop" i daljnje napredovanje progess bar se zaustavlja.
+-	Zbog stalnog dohvaćanja stanja progress bar, automatsko zaustavljanje na određenoj razini nije uspješno bez dodatnih vremenskih proračuna i proračuna brzine popunjavanja bara. Zato je zaustavljeno stanje progress bara gotovo uvijek različito tj. veće od predane vrijednosti.
 
 
